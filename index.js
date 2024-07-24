@@ -2,11 +2,12 @@ const express = require('express')
 const app = express()
 
 app.set('view engine', 'ejs')
+app.use(express.static('public'))
 
 app.get("/:user", (req, res) => {
 
     var user = req.params.user
-    var nacionatility = req.query['from']
+    var nacionality = req.query['from']
 
     var info = [
         {age: 20, unit: 'year'},
@@ -17,7 +18,7 @@ app.get("/:user", (req, res) => {
 
     res.render("home", {
         user: user,
-        from: nacionatility, 
+        from: nacionality, 
         info: info
     })
 })

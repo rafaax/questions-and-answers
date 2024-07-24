@@ -8,21 +8,30 @@
     <link rel='stylesheet' type='text/css' media='screen' href='/css/bootstrap.min.css'>
 </head>
 <body>
+    <nav class="navbar navbar-dark bg-dark">
+        <a class="navbar-brand" href="/home">Home</a>
+    </nav>
     <div class="container-sm">
-        <div class="alert alert-primary" >
-            Olá <b><%=user%></b> Seja bem vindo ao formulario, preencha para ir para a próxima tela!
-        </div>
-        
-        <form>
-            <div class="form-group p-3">
-                <label for="pergunta_titulo">Titulo</label>
-                <input id="pergunta_titulo" name="titulo" placeholder="Titulo da pergunta" type="text" class="form-control">
+        <div class="card">
+            <div class="card-header">
+                <div class="alert alert-primary" >
+                    Olá <b><%=user%></b> Seja bem vindo ao formulario, preencha para ir para a próxima tela!
+                </div>                
             </div>
-            <div class="form-group p-3">
-                <textarea id="pergunta_text" placeholder="Escreva sua dúvida" name="pergunta" class="form-control" rows="4" cols="50"></textarea>
+            <div class="card-body">
+                <form>
+                    <div class="form-group p-3">
+                        <label for="pergunta_titulo">Titulo</label>
+                        <input id="pergunta_titulo" name="titulo" placeholder="Titulo da pergunta" type="text" class="form-control">
+                    </div>
+                    <div class="form-group p-3">
+                        <textarea id="pergunta_text" placeholder="Escreva sua dúvida" name="pergunta" class="form-control" rows="4" cols="50"></textarea>
+                    </div>
+                    <div class=""><button class="btn btn-success" type="submit">Enviar</button> </div>
+                </form>                
             </div>
 
-        </form>
+        </div>
         
     </div>
 </body>

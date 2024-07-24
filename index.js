@@ -3,11 +3,15 @@ const app = express()
 
 app.set('view engine', 'ejs')
 
-app.get("", (req, res) => {
+app.get("/:user", (req, res) => {
 
-    let user = "bORZ"
+    var user = req.params.user
+    var nacionatility = req.query['from']
+
+
     res.render("home", {
-        user: user
+        user: user,
+        from: nacionatility
     })
 })
 

@@ -4,9 +4,13 @@ const app = express()
 app.set('view engine', 'ejs')
 
 app.get("", (req, res) => {
-    res.render("home")
+
+    let user = "bORZ"
+    res.render("home", {
+        user: user
+    })
 })
 
 app.listen(8080, () => {
-    console.log('SERVER INICIADO')
-} )
+    console.log('...')
+})

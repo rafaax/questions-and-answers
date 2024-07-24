@@ -8,6 +8,7 @@ app.get("/:user", (req, res) => {
 
     var user = req.params.user
     var nacionality = req.query['from']
+    var img = req.query['img']
 
     var info = [
         {age: 20, unit: 'year'},
@@ -19,7 +20,8 @@ app.get("/:user", (req, res) => {
     res.render("home", {
         user: user,
         from: nacionality, 
-        info: info
+        info: info,
+        img: img
     })
 })
 

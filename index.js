@@ -7,8 +7,7 @@ app.use(express.static('public'))
 app.get("/:user", (req, res) => {
 
     res.render("home", {
-        user: req.params.user,
-        img: true
+        user: req.params.user
     })
 })
 

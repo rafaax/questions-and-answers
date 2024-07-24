@@ -6,25 +6,7 @@ app.use(express.static('public'))
 
 app.get("/:user", (req, res) => {
 
-    var user = req.params.user
-    var nacionality = req.query['from']
-    var img = req.query['img']
-
-    console.log(img)
-
-    var info = [
-        {age: 20, unit: 'year'},
-        {height:  169, unit: 'centimeters'},
-        {weight: 154, unit: 'pounds'}
-    ]
-
-
-    res.render("home", {
-        user: user,
-        from: nacionality, 
-        info: info,
-        img: img
-    })
+    res.render("home", {})
 })
 
 app.listen(8080, () => {

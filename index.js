@@ -10,6 +10,8 @@ app.get("/:user", (req, res) => {
     var nacionality = req.query['from']
     var img = req.query['img']
 
+    console.log(img)
+
     var info = [
         {age: 20, unit: 'year'},
         {height:  169, unit: 'centimeters'},

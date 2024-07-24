@@ -6,7 +6,17 @@ app.use(express.static('public'))
 
 app.get("/:user", (req, res) => {
 
-    res.render("home", {})
+    res.render("home", {
+        user: req.params.user,
+        img: true
+    })
+})
+
+app.get("/:user/form", (req, res) => {
+
+    res.render("form", {
+        user: req.params.user
+    })
 })
 
 app.listen(8080, () => {
